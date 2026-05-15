@@ -1,9 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" role="img" aria-labelledby="title desc">
   <title id="title">Technical architecture for PHI Guard Intelligence</title>
-  <desc id="desc">A data flow diagram showing source systems, local scanner, sanitized package, API, metadata store, and UI.</desc>
-  <rect width="1200" height="700" fill="#ffffff"/>
-  <text x="72" y="78" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#162033">Metadata-first Architecture</text>
-  <text x="72" y="108" font-family="Inter, Arial, sans-serif" font-size="16" fill="#667085">Designed so classification happens near the data source and the platform stores sanitized evidence.</text>
+  <desc id="desc">A data flow diagram showing source systems, local scanning, sanitized evidence, API ingestion, metadata storage, risk reasoning, and the React user interface.</desc>
+  <rect width="1280" height="780" fill="#ffffff"/>
+  <rect x="48" y="44" width="1184" height="692" rx="20" fill="#f8fafc" stroke="#d6dee9"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="88" y="104" font-size="36" font-weight="800" fill="#162033">Metadata-First Architecture</text>
+    <text x="88" y="138" font-size="18" fill="#667085">Classification happens near the data source; the platform stores sanitized evidence and remediation context.</text>
+  </g>
 
   <defs>
     <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
@@ -11,56 +15,64 @@
     </marker>
   </defs>
 
-  <g font-family="Inter, Arial, sans-serif">
-    <rect x="72" y="176" width="190" height="118" rx="16" fill="#eef7ff" stroke="#84caff"/>
-    <text x="98" y="214" font-size="19" font-weight="800" fill="#175cd3">Data sources</text>
-    <text x="98" y="246" font-size="14" fill="#344054">PostgreSQL, files, logs</text>
-    <text x="98" y="270" font-size="14" fill="#344054">FHIR, dbt, SQLite</text>
-
-    <rect x="330" y="176" width="210" height="118" rx="16" fill="#ecfdf3" stroke="#abefc6"/>
-    <text x="356" y="214" font-size="19" font-weight="800" fill="#067647">Local scanner</text>
-    <text x="356" y="246" font-size="14" fill="#344054">Schema profiling</text>
-    <text x="356" y="270" font-size="14" fill="#344054">Masked sample signals</text>
-
-    <rect x="608" y="176" width="210" height="118" rx="16" fill="#fff8e6" stroke="#ffdf89"/>
-    <text x="634" y="214" font-size="19" font-weight="800" fill="#b54708">Sanitized package</text>
-    <text x="634" y="246" font-size="14" fill="#344054">Labels, confidence</text>
-    <text x="634" y="270" font-size="14" fill="#344054">raw_value_stored=false</text>
-
-    <rect x="886" y="176" width="210" height="118" rx="16" fill="#f2f4f7" stroke="#d0d5dd"/>
-    <text x="912" y="214" font-size="19" font-weight="800" fill="#344054">FastAPI service</text>
-    <text x="912" y="246" font-size="14" fill="#344054">Findings, graph, report</text>
-    <text x="912" y="270" font-size="14" fill="#344054">Agent ingestion API</text>
-
-    <rect x="226" y="426" width="210" height="118" rx="16" fill="#fef3f2" stroke="#fda29b"/>
-    <text x="252" y="464" font-size="19" font-weight="800" fill="#b42318">Risk engine</text>
-    <text x="252" y="496" font-size="14" fill="#344054">Deterministic rules</text>
-    <text x="252" y="520" font-size="14" fill="#344054">Blast radius scoring</text>
-
-    <rect x="496" y="426" width="210" height="118" rx="16" fill="#f8f5ff" stroke="#d6bbfb"/>
-    <text x="522" y="464" font-size="19" font-weight="800" fill="#6941c6">Metadata store</text>
-    <text x="522" y="496" font-size="14" fill="#344054">Assets, lineage, access</text>
-    <text x="522" y="520" font-size="14" fill="#344054">Findings and evidence</text>
-
-    <rect x="766" y="426" width="210" height="118" rx="16" fill="#f0f9ff" stroke="#7dd3fc"/>
-    <text x="792" y="464" font-size="19" font-weight="800" fill="#0369a1">React UI</text>
-    <text x="792" y="496" font-size="14" fill="#344054">Dashboard, graph</text>
-    <text x="792" y="520" font-size="14" fill="#344054">De-ID, access, report</text>
-  </g>
-
   <g stroke="#475467" stroke-width="2.5" marker-end="url(#arrow)" fill="none">
-    <path d="M262 235h62"/>
-    <path d="M540 235h62"/>
-    <path d="M818 235h62"/>
-    <path d="M991 294v96c0 52-34 96-85 110l-18 5"/>
-    <path d="M713 294v71c0 42-28 78-68 89"/>
-    <path d="M435 294v64c0 45-28 86-69 101"/>
-    <path d="M436 485h54"/>
-    <path d="M706 485h54"/>
+    <path d="M272 280h70"/>
+    <path d="M548 280h70"/>
+    <path d="M824 280h70"/>
+    <path d="M994 348v88"/>
+    <path d="M718 348v88"/>
+    <path d="M442 348v88"/>
+    <path d="M544 494h70"/>
+    <path d="M820 494h70"/>
   </g>
 
-  <g font-family="Inter, Arial, sans-serif" font-size="14">
-    <rect x="72" y="608" width="1056" height="46" rx="23" fill="#172033"/>
-    <text x="110" y="637" fill="#ffffff">Trust boundary: raw PHI remains in source environments by default; the platform stores masked evidence, counts, labels, confidence, and remediation context.</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="88" y="212" width="184" height="136" rx="16" fill="#eef7ff" stroke="#84caff"/>
+    <text x="114" y="252" font-size="19" font-weight="800" fill="#175cd3">Data sources</text>
+    <text x="114" y="286" font-size="15" fill="#344054">PostgreSQL, files,</text>
+    <text x="114" y="312" font-size="15" fill="#344054">logs, FHIR, dbt,</text>
+    <text x="114" y="338" font-size="15" fill="#344054">SQLite, and DDL</text>
+
+    <rect x="342" y="212" width="206" height="136" rx="16" fill="#ecfdf3" stroke="#abefc6"/>
+    <text x="370" y="252" font-size="19" font-weight="800" fill="#067647">Local scanner</text>
+    <text x="370" y="286" font-size="15" fill="#344054">Schema profiling</text>
+    <text x="370" y="312" font-size="15" fill="#344054">Pattern detection</text>
+    <text x="370" y="338" font-size="15" fill="#344054">Masked samples</text>
+
+    <rect x="618" y="212" width="206" height="136" rx="16" fill="#fff8e6" stroke="#ffdf89"/>
+    <text x="646" y="252" font-size="19" font-weight="800" fill="#b54708">Sanitized package</text>
+    <text x="646" y="286" font-size="15" fill="#344054">Labels, confidence,</text>
+    <text x="646" y="312" font-size="15" fill="#344054">lineage, and evidence</text>
+    <text x="646" y="338" font-size="15" fill="#344054">raw_value_stored=false</text>
+
+    <rect x="894" y="212" width="206" height="136" rx="16" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="922" y="252" font-size="19" font-weight="800" fill="#334155">FastAPI service</text>
+    <text x="922" y="286" font-size="15" fill="#344054">Findings, graph,</text>
+    <text x="922" y="312" font-size="15" fill="#344054">reporting, uploads,</text>
+    <text x="922" y="338" font-size="15" fill="#344054">and agent ingestion</text>
+
+    <rect x="338" y="436" width="206" height="136" rx="16" fill="#fef3f2" stroke="#fda29b"/>
+    <text x="366" y="476" font-size="19" font-weight="800" fill="#b42318">Risk engine</text>
+    <text x="366" y="510" font-size="15" fill="#344054">Deterministic rules</text>
+    <text x="366" y="536" font-size="15" fill="#344054">Risk scoring</text>
+    <text x="366" y="562" font-size="15" fill="#344054">Control mapping</text>
+
+    <rect x="614" y="436" width="206" height="136" rx="16" fill="#f8f5ff" stroke="#d6bbfb"/>
+    <text x="642" y="476" font-size="19" font-weight="800" fill="#6941c6">Metadata store</text>
+    <text x="642" y="510" font-size="15" fill="#344054">Assets, lineage,</text>
+    <text x="642" y="536" font-size="15" fill="#344054">access grants,</text>
+    <text x="642" y="562" font-size="15" fill="#344054">findings, evidence</text>
+
+    <rect x="890" y="436" width="206" height="136" rx="16" fill="#f0f9ff" stroke="#7dd3fc"/>
+    <text x="918" y="476" font-size="19" font-weight="800" fill="#0369a1">React UI</text>
+    <text x="918" y="510" font-size="15" fill="#344054">Dashboard, graph,</text>
+    <text x="918" y="536" font-size="15" fill="#344054">de-ID, access,</text>
+    <text x="918" y="562" font-size="15" fill="#344054">and reports</text>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="88" y="638" width="1104" height="58" rx="29" fill="#172033"/>
+    <text x="128" y="662" font-size="15" fill="#ffffff">Trust boundary</text>
+    <text x="128" y="684" font-size="15" fill="#c7d2e3">Raw PHI remains in source environments by default; stored results use masked evidence, counts, labels, confidence, and remediation context.</text>
   </g>
 </svg>

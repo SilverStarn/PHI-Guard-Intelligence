@@ -1,85 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
   <title id="title">PHI Guard Intelligence console preview</title>
-  <desc id="desc">A stylized dashboard showing risk metrics, a findings queue, a de-identification readiness chart, and a data risk map.</desc>
-  <rect width="1200" height="720" fill="#f5f7fb"/>
-  <rect x="42" y="36" width="1116" height="648" rx="18" fill="#ffffff" stroke="#d5dde8"/>
-  <rect x="42" y="36" width="218" height="648" rx="18" fill="#172033"/>
-  <circle cx="82" cy="82" r="22" fill="#2dd4bf"/>
-  <path d="M72 83l7 7 14-18" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="116" y="78" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">PHI Guard</text>
-  <text x="116" y="102" font-family="Inter, Arial, sans-serif" font-size="13" fill="#98a6bd">Intelligence console</text>
+  <desc id="desc">A dashboard preview showing risk metrics, top findings, a data risk map, and de-identification status.</desc>
+  <rect width="1280" height="760" fill="#f5f7fb"/>
+  <rect x="48" y="42" width="1184" height="676" rx="18" fill="#ffffff" stroke="#d5dde8"/>
+  <path d="M66 42h222v676H66c-10 0-18-8-18-18V60c0-10 8-18 18-18z" fill="#172033"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <circle cx="90" cy="88" r="22" fill="#2dd4bf"/>
+    <path d="M80 89l7 7 14-18" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="124" y="84" font-size="22" font-weight="700" fill="#ffffff">PHI Guard</text>
+    <text x="124" y="108" font-size="13" fill="#98a6bd">Intelligence console</text>
+  </g>
 
   <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#c7d2e3">
-    <rect x="66" y="146" width="168" height="38" rx="8" fill="#243149"/>
-    <text x="104" y="170">Dashboard</text>
-    <text x="104" y="221">Data Map</text>
-    <text x="104" y="270">Findings</text>
-    <text x="104" y="319">Remediation</text>
-    <text x="104" y="368">De-ID</text>
-    <text x="104" y="417">Access</text>
-    <text x="104" y="466">Report</text>
-  </g>
-
-  <text x="300" y="84" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="750" fill="#162033">Northstar Clinic PHI Risk Intelligence</text>
-  <text x="300" y="112" font-family="Inter, Arial, sans-serif" font-size="15" fill="#667085">Metadata-first discovery, graph context, and remediation evidence for healthcare data teams.</text>
-
-  <g font-family="Inter, Arial, sans-serif">
-    <rect x="300" y="146" width="178" height="118" rx="12" fill="#fff5f5" stroke="#ffd1d1"/>
-    <text x="322" y="179" font-size="13" fill="#9b1c1c">Risk score</text>
-    <text x="322" y="232" font-size="54" font-weight="800" fill="#d92d20">91</text>
-
-    <rect x="500" y="146" width="178" height="118" rx="12" fill="#fff8e6" stroke="#ffdf89"/>
-    <text x="522" y="179" font-size="13" fill="#9a5b00">Critical findings</text>
-    <text x="522" y="232" font-size="54" font-weight="800" fill="#b54708">8</text>
-
-    <rect x="700" y="146" width="178" height="118" rx="12" fill="#eef7ff" stroke="#b7ddff"/>
-    <text x="722" y="179" font-size="13" fill="#175cd3">PHI assets</text>
-    <text x="722" y="232" font-size="54" font-weight="800" fill="#175cd3">14</text>
-
-    <rect x="900" y="146" width="218" height="118" rx="12" fill="#ecfdf3" stroke="#abefc6"/>
-    <text x="922" y="179" font-size="13" fill="#067647">De-ID readiness</text>
-    <text x="922" y="232" font-size="54" font-weight="800" fill="#079455">62%</text>
+    <rect x="72" y="150" width="190" height="40" rx="8" fill="#243149"/>
+    <text x="112" y="176">Dashboard</text>
+    <text x="112" y="230">Data Map</text>
+    <text x="112" y="282">Findings</text>
+    <text x="112" y="334">Remediation</text>
+    <text x="112" y="386">De-ID</text>
+    <text x="112" y="438">Access</text>
+    <text x="112" y="490">Report</text>
   </g>
 
   <g font-family="Inter, Arial, sans-serif">
-    <rect x="300" y="296" width="386" height="330" rx="14" fill="#ffffff" stroke="#d5dde8"/>
-    <text x="326" y="334" font-size="20" font-weight="750" fill="#162033">Top findings</text>
+    <text x="330" y="92" font-size="30" font-weight="750" fill="#162033">Northstar Clinic PHI Risk Intelligence</text>
+    <text x="330" y="122" font-size="16" fill="#667085">Metadata-first discovery, graph context, and remediation evidence for healthcare data teams.</text>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="330" y="160" width="180" height="118" rx="12" fill="#fff5f5" stroke="#ffd1d1"/>
+    <text x="352" y="194" font-size="13" fill="#9b1c1c">Risk score</text>
+    <text x="352" y="244" font-size="52" font-weight="800" fill="#d92d20">91</text>
+
+    <rect x="532" y="160" width="180" height="118" rx="12" fill="#fff8e6" stroke="#ffdf89"/>
+    <text x="554" y="194" font-size="13" fill="#9a5b00">Critical findings</text>
+    <text x="554" y="244" font-size="52" font-weight="800" fill="#b54708">8</text>
+
+    <rect x="734" y="160" width="180" height="118" rx="12" fill="#eef7ff" stroke="#b7ddff"/>
+    <text x="756" y="194" font-size="13" fill="#175cd3">PHI assets</text>
+    <text x="756" y="244" font-size="52" font-weight="800" fill="#175cd3">14</text>
+
+    <rect x="936" y="160" width="230" height="118" rx="12" fill="#ecfdf3" stroke="#abefc6"/>
+    <text x="958" y="194" font-size="13" fill="#067647">De-ID readiness</text>
+    <text x="958" y="244" font-size="52" font-weight="800" fill="#079455">62%</text>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="330" y="316" width="410" height="344" rx="14" fill="#ffffff" stroke="#d5dde8"/>
+    <text x="358" y="356" font-size="20" font-weight="750" fill="#162033">Top findings</text>
+
     <g font-size="14">
-      <rect x="326" y="364" width="334" height="48" rx="8" fill="#fff1f3"/>
-      <text x="346" y="393" fill="#b42318" font-weight="700">Critical</text>
-      <text x="426" y="393" fill="#243044">AI prompt logs may contain PHI</text>
-      <rect x="326" y="426" width="334" height="48" rx="8" fill="#fff8e6"/>
-      <text x="346" y="455" fill="#b54708" font-weight="700">High</text>
-      <text x="426" y="455" fill="#243044">Free text blocks de-identification</text>
-      <rect x="326" y="488" width="334" height="48" rx="8" fill="#eef7ff"/>
-      <text x="346" y="517" fill="#175cd3" font-weight="700">Review</text>
-      <text x="426" y="517" fill="#243044">Marketing export includes identifiers</text>
-      <rect x="326" y="550" width="334" height="48" rx="8" fill="#f2f4f7"/>
-      <text x="346" y="579" fill="#344054" font-weight="700">Audit</text>
-      <text x="426" y="579" fill="#243044">Old service account has broad access</text>
+      <rect x="358" y="386" width="352" height="52" rx="8" fill="#fff1f3"/>
+      <text x="378" y="418" fill="#b42318" font-weight="700">Critical</text>
+      <text x="464" y="418" fill="#243044">AI prompt logs may contain PHI</text>
+
+      <rect x="358" y="452" width="352" height="52" rx="8" fill="#fff8e6"/>
+      <text x="378" y="484" fill="#b54708" font-weight="700">High</text>
+      <text x="464" y="484" fill="#243044">Free text blocks de-identification</text>
+
+      <rect x="358" y="518" width="352" height="52" rx="8" fill="#eef7ff"/>
+      <text x="378" y="550" fill="#175cd3" font-weight="700">Review</text>
+      <text x="464" y="550" fill="#243044">Marketing export includes IDs</text>
+
+      <rect x="358" y="584" width="352" height="52" rx="8" fill="#f2f4f7"/>
+      <text x="378" y="616" fill="#344054" font-weight="700">Audit</text>
+      <text x="464" y="616" fill="#243044">Service account has broad access</text>
     </g>
   </g>
 
   <g font-family="Inter, Arial, sans-serif">
-    <rect x="718" y="296" width="400" height="330" rx="14" fill="#ffffff" stroke="#d5dde8"/>
-    <text x="744" y="334" font-size="20" font-weight="750" fill="#162033">Data risk map</text>
+    <rect x="774" y="316" width="392" height="344" rx="14" fill="#ffffff" stroke="#d5dde8"/>
+    <text x="802" y="356" font-size="20" font-weight="750" fill="#162033">Data risk map</text>
+
     <g stroke="#98a2b3" stroke-width="2">
-      <line x1="808" y1="408" x2="918" y2="408"/>
-      <line x1="918" y1="408" x2="1010" y2="350"/>
-      <line x1="918" y1="408" x2="1010" y2="468"/>
-      <line x1="808" y1="506" x2="918" y2="408"/>
+      <line x1="864" y1="434" x2="972" y2="434"/>
+      <line x1="972" y1="434" x2="1064" y2="382"/>
+      <line x1="972" y1="434" x2="1064" y2="500"/>
+      <line x1="864" y1="530" x2="972" y2="434"/>
     </g>
-    <rect x="748" y="376" width="120" height="64" rx="10" fill="#e6f4ff" stroke="#84caff"/>
-    <text x="770" y="412" font-size="14" font-weight="700" fill="#175cd3">patients</text>
-    <rect x="748" y="474" width="120" height="64" rx="10" fill="#fef3f2" stroke="#fda29b"/>
-    <text x="767" y="510" font-size="14" font-weight="700" fill="#b42318">claims</text>
-    <rect x="888" y="376" width="120" height="64" rx="10" fill="#fffaeb" stroke="#fedf89"/>
-    <text x="913" y="412" font-size="14" font-weight="700" fill="#b54708">exports</text>
-    <rect x="1008" y="318" width="84" height="64" rx="10" fill="#fef3f2" stroke="#fda29b"/>
-    <text x="1026" y="354" font-size="14" font-weight="700" fill="#b42318">AI</text>
-    <rect x="1008" y="436" width="84" height="64" rx="10" fill="#f2f4f7" stroke="#d0d5dd"/>
-    <text x="1028" y="472" font-size="14" font-weight="700" fill="#344054">roles</text>
-    <rect x="782" y="566" width="280" height="32" rx="16" fill="#ecfdf3"/>
-    <text x="814" y="587" font-size="13" fill="#067647">Raw PHI stays out of the result model</text>
+
+    <rect x="804" y="402" width="120" height="64" rx="10" fill="#e6f4ff" stroke="#84caff"/>
+    <text x="828" y="440" font-size="14" font-weight="700" fill="#175cd3">patients</text>
+
+    <rect x="804" y="498" width="120" height="64" rx="10" fill="#fef3f2" stroke="#fda29b"/>
+    <text x="826" y="536" font-size="14" font-weight="700" fill="#b42318">claims</text>
+
+    <rect x="944" y="402" width="120" height="64" rx="10" fill="#fffaeb" stroke="#fedf89"/>
+    <text x="970" y="440" font-size="14" font-weight="700" fill="#b54708">exports</text>
+
+    <rect x="1058" y="350" width="82" height="64" rx="10" fill="#fef3f2" stroke="#fda29b"/>
+    <text x="1080" y="388" font-size="14" font-weight="700" fill="#b42318">AI</text>
+
+    <rect x="1058" y="468" width="82" height="64" rx="10" fill="#f2f4f7" stroke="#d0d5dd"/>
+    <text x="1078" y="506" font-size="14" font-weight="700" fill="#344054">roles</text>
+
+    <rect x="822" y="594" width="304" height="34" rx="17" fill="#ecfdf3"/>
+    <text x="854" y="616" font-size="13" fill="#067647">Raw PHI stays out of the result model</text>
   </g>
 </svg>

@@ -1,54 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
   <title id="title">Buyer value map for PHI Guard Intelligence</title>
-  <desc id="desc">A value map connecting IT, security, privacy, analytics, and executive buyers to outcomes.</desc>
-  <rect width="1200" height="680" fill="#ffffff"/>
-  <rect x="42" y="42" width="1116" height="596" rx="22" fill="#f7f9fc" stroke="#d5dde8"/>
-  <text x="92" y="104" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#162033">Who PHI Guard Intelligence Helps</text>
-  <text x="92" y="134" font-family="Inter, Arial, sans-serif" font-size="16" fill="#667085">One evidence layer for privacy risk, security operations, data governance, and executive reporting.</text>
+  <desc id="desc">A spacious value map showing how PHI Guard Intelligence serves executive, IT, security, privacy, regulatory, and data teams.</desc>
+  <rect width="1280" height="760" fill="#ffffff"/>
+  <rect x="48" y="44" width="1184" height="672" rx="20" fill="#f8fafc" stroke="#d6dee9"/>
 
   <g font-family="Inter, Arial, sans-serif">
-    <rect x="450" y="234" width="300" height="190" rx="22" fill="#172033"/>
-    <circle cx="600" cy="286" r="34" fill="#2dd4bf"/>
-    <text x="486" y="346" font-size="23" font-weight="800" fill="#ffffff">PHI Guard Intelligence</text>
-    <text x="508" y="378" font-size="15" fill="#c7d2e3">Find PHI risk, explain why it matters, and drive remediation.</text>
+    <text x="92" y="106" font-size="36" font-weight="800" fill="#162033">Who PHI Guard Intelligence Helps</text>
+    <text x="92" y="140" font-size="18" fill="#667085">One evidence layer for privacy risk, security operations, data governance, and executive reporting.</text>
   </g>
 
-  <g stroke="#98a2b3" stroke-width="2.5" fill="none">
-    <path d="M450 294H254"/>
-    <path d="M450 370H254"/>
-    <path d="M750 294h196"/>
-    <path d="M750 370h196"/>
-    <path d="M600 234V166"/>
-    <path d="M600 424v76"/>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2l8 4-8 4z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <g stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M640 304V224"/>
+    <path d="M480 390H300"/>
+    <path d="M480 470H300"/>
+    <path d="M800 390h180"/>
+    <path d="M800 470h180"/>
+    <path d="M640 536v68"/>
   </g>
 
-  <g font-family="Inter, Arial, sans-serif" font-size="15">
-    <rect x="88" y="242" width="166" height="96" rx="14" fill="#eef7ff" stroke="#b7ddff"/>
-    <text x="112" y="276" font-weight="800" fill="#175cd3">IT leaders</text>
-    <text x="112" y="304" fill="#344054">Map sensitive systems</text>
-    <text x="112" y="326" fill="#344054">without raw PHI copies</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="480" y="304" width="320" height="232" rx="24" fill="#172033"/>
+    <circle cx="640" cy="360" r="34" fill="#2dd4bf"/>
+    <text x="560" y="426" font-size="28" font-weight="800" fill="#ffffff">PHI Guard</text>
+    <text x="542" y="460" font-size="28" font-weight="800" fill="#ffffff">Intelligence</text>
+    <text x="536" y="494" font-size="17" fill="#c7d2e3">Find PHI risk, explain impact,</text>
+    <text x="560" y="520" font-size="17" fill="#c7d2e3">and drive remediation.</text>
+  </g>
 
-    <rect x="88" y="348" width="166" height="96" rx="14" fill="#fff8e6" stroke="#ffdf89"/>
-    <text x="112" y="382" font-weight="800" fill="#b54708">Security</text>
-    <text x="112" y="410" fill="#344054">Prioritize access, audit,</text>
-    <text x="112" y="432" fill="#344054">logs, and AI exposure</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="17">
+    <rect x="510" y="164" width="260" height="86" rx="14" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="542" y="202" font-weight="800" fill="#334155">Executives</text>
+    <text x="542" y="230" fill="#344054">Know the risk story fast</text>
 
-    <rect x="946" y="242" width="166" height="96" rx="14" fill="#ecfdf3" stroke="#abefc6"/>
-    <text x="970" y="276" font-weight="800" fill="#067647">Privacy teams</text>
-    <text x="970" y="304" fill="#344054">Turn findings into</text>
-    <text x="970" y="326" fill="#344054">reviewable evidence</text>
+    <rect x="112" y="334" width="188" height="112" rx="15" fill="#eef7ff" stroke="#93c5fd"/>
+    <text x="140" y="374" font-weight="800" fill="#175cd3">IT leaders</text>
+    <text x="140" y="404" fill="#344054">Map systems</text>
+    <text x="140" y="430" fill="#344054">without raw copies</text>
 
-    <rect x="946" y="348" width="166" height="96" rx="14" fill="#fff1f3" stroke="#fda29b"/>
-    <text x="970" y="382" font-weight="800" fill="#b42318">Regulatory</text>
-    <text x="970" y="410" fill="#344054">Show risk analysis,</text>
-    <text x="970" y="432" fill="#344054">controls, and history</text>
+    <rect x="112" y="454" width="188" height="112" rx="15" fill="#fff8e6" stroke="#facc15"/>
+    <text x="140" y="494" font-weight="800" fill="#b54708">Security</text>
+    <text x="140" y="524" fill="#344054">Prioritize access,</text>
+    <text x="140" y="550" fill="#344054">audit, logs, and AI</text>
 
-    <rect x="478" y="86" width="244" height="80" rx="14" fill="#f2f4f7" stroke="#d0d5dd"/>
-    <text x="506" y="120" font-weight="800" fill="#344054">Executives</text>
-    <text x="506" y="148" fill="#344054">Know the risk story in minutes</text>
+    <rect x="980" y="334" width="188" height="112" rx="15" fill="#ecfdf3" stroke="#86efac"/>
+    <text x="1008" y="374" font-weight="800" fill="#067647">Privacy teams</text>
+    <text x="1008" y="404" fill="#344054">Turn findings into</text>
+    <text x="1008" y="430" fill="#344054">reviewable evidence</text>
 
-    <rect x="478" y="500" width="244" height="80" rx="14" fill="#f0f9ff" stroke="#7dd3fc"/>
-    <text x="506" y="534" font-weight="800" fill="#0369a1">Data teams</text>
-    <text x="506" y="562" fill="#344054">Keep analytics useful and safer</text>
+    <rect x="980" y="454" width="188" height="112" rx="15" fill="#fff1f3" stroke="#fda29b"/>
+    <text x="1008" y="494" font-weight="800" fill="#b42318">Regulatory</text>
+    <text x="1008" y="524" fill="#344054">Show risk analysis,</text>
+    <text x="1008" y="550" fill="#344054">controls, and history</text>
+
+    <rect x="510" y="604" width="260" height="100" rx="14" fill="#f0f9ff" stroke="#7dd3fc"/>
+    <text x="542" y="642" font-weight="800" fill="#0369a1">Data teams</text>
+    <text x="542" y="670" fill="#344054">Keep analytics useful</text>
+    <text x="542" y="694" fill="#344054">and safer</text>
   </g>
 </svg>
