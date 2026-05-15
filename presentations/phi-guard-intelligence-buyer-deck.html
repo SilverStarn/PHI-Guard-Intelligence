@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PHI Guard Intelligence Buyer Deck</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #162033;
+        --muted: #667085;
+        --line: #d5dde8;
+        --panel: #ffffff;
+        --bg: #f5f7fb;
+        --teal: #0f766e;
+        --blue: #175cd3;
+        --red: #b42318;
+        --gold: #b54708;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        display: grid;
+        gap: 28px;
+        padding: 28px;
+      }
+
+      section {
+        min-height: calc(100vh - 56px);
+        display: grid;
+        align-content: center;
+        gap: 26px;
+        padding: 56px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: 0 18px 42px rgba(22, 32, 51, 0.08);
+      }
+
+      .hero {
+        grid-template-columns: 0.8fr 1.2fr;
+        align-items: center;
+      }
+
+      .split {
+        grid-template-columns: 0.9fr 1.1fr;
+        align-items: center;
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: var(--teal);
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        max-width: 980px;
+        line-height: 1.04;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 7vw, 6.6rem);
+      }
+
+      h2 {
+        font-size: clamp(2.35rem, 5vw, 4.4rem);
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        font-size: clamp(1.1rem, 1.7vw, 1.45rem);
+        line-height: 1.5;
+      }
+
+      ul {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding-left: 24px;
+      }
+
+      blockquote {
+        margin: 0;
+        padding: 24px 28px;
+        border-left: 7px solid var(--teal);
+        background: #ecfdf3;
+        color: var(--ink);
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        font-weight: 750;
+        line-height: 1.35;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+
+      .metric-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+
+      .metric {
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: #f8fafc;
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--ink);
+        font-size: 2.2rem;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      .red strong {
+        color: var(--red);
+      }
+
+      .blue strong {
+        color: var(--blue);
+      }
+
+      .gold strong {
+        color: var(--gold);
+      }
+
+      .teal strong {
+        color: var(--teal);
+      }
+
+      .sources p,
+      .sources li {
+        font-size: 1rem;
+      }
+
+      @media print {
+        main {
+          padding: 0;
+          gap: 0;
+        }
+
+        section {
+          min-height: 100vh;
+          break-after: page;
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Healthcare data risk intelligence</p>
+          <h1>PHI Guard Intelligence</h1>
+          <p>Find where potential PHI risk lives, how it moves, who can access it, and what should be fixed first.</p>
+        </div>
+        <img src="../docs/assets/console-preview.svg" alt="PHI Guard Intelligence console preview" />
+      </section>
+
+      <section>
+        <p class="eyebrow">The problem</p>
+        <h2>Healthcare data risk is scattered across systems.</h2>
+        <blockquote>Where is PHI, who can access it, where does it flow, and what should we fix first?</blockquote>
+        <ul>
+          <li>Production databases, analytics exports, logs, support tickets, AI workflows, FHIR payloads, and vendor data flows all create visibility gaps.</li>
+          <li>Catalog, DLP, GRC, and security tools each cover part of the problem, but buyers need a shared evidence layer.</li>
+        </ul>
+      </section>
+
+      <section class="split">
+        <div>
+          <p class="eyebrow">The product</p>
+          <h2>A risk intelligence map built for healthcare data teams.</h2>
+          <ul>
+            <li>Classifies PHI-risk signals and de-identification blockers.</li>
+            <li>Maps assets, lineage, access, findings, AI/log destinations, and controls.</li>
+            <li>Explains risk with evidence, blast radius, confidence, and remediation steps.</li>
+          </ul>
+        </div>
+        <div class="metric-row">
+          <div class="metric red"><strong>91</strong><span>risk score</span></div>
+          <div class="metric gold"><strong>8</strong><span>critical findings</span></div>
+          <div class="metric blue"><strong>14</strong><span>PHI assets</span></div>
+          <div class="metric teal"><strong>62%</strong><span>De-ID readiness</span></div>
+        </div>
+      </section>
+
+      <section>
+        <p class="eyebrow">Buyer value</p>
+        <h2>One evidence layer for IT, security, privacy, data, and regulatory review.</h2>
+        <img src="../docs/assets/buyer-value-map.svg" alt="Buyer value map" />
+      </section>
+
+      <section>
+        <p class="eyebrow">Architecture</p>
+        <h2>Classify near the data. Send sanitized evidence.</h2>
+        <img src="../docs/assets/technical-architecture.svg" alt="Technical architecture" />
+      </section>
+
+      <section>
+        <p class="eyebrow">Regulatory workflow</p>
+        <h2>From discovery to audit-ready evidence.</h2>
+        <img src="../docs/assets/regulatory-evidence-loop.svg" alt="Regulatory evidence loop" />
+      </section>
+
+      <section>
+        <p class="eyebrow">Demo flow</p>
+        <h2>Five moments that sell the product.</h2>
+        <ul>
+          <li>AI prompt/log table with PHI-risk signals.</li>
+          <li>Free-text notes blocking de-identification readiness.</li>
+          <li>Marketing export with identifiers and diagnosis context.</li>
+          <li>Broad analyst or service-account access to combined PHI.</li>
+          <li>Remediation backlog with controls, owners, effort, and due windows.</li>
+        </ul>
+      </section>
+
+      <section>
+        <p class="eyebrow">Credibility</p>
+        <h2>This is a working product prototype, not only a pitch.</h2>
+        <ul>
+          <li>React/TypeScript frontend, FastAPI backend, Python scanner and rule engine.</li>
+          <li>Scanner-agent CLI, PostgreSQL metadata schema, Docker scaffolding, and synthetic healthcare data.</li>
+          <li>Tests cover API contracts, classifier behavior, importers, demo scans, and scanner-agent packages.</li>
+        </ul>
+      </section>
+
+      <section>
+        <p class="eyebrow">Close</p>
+        <h2>PHI Guard Intelligence helps healthcare teams see risk clearly enough to reduce it.</h2>
+        <blockquote>Where PHI risk lives. How it moves. Who can access it. Why it matters. What to fix first.</blockquote>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Guardrails and sources</p>
+        <h2>HIPAA-oriented risk intelligence, not legal advice or certification.</h2>
+        <p>Public HHS references used for positioning:</p>
+        <ul>
+          <li>Risk analysis guidance: https://www.hhs.gov/hipaa/for-professionals/security/guidance/guidance-risk-analysis/index.html</li>
+          <li>De-identification guidance: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html</li>
+          <li>Privacy Rule summary: https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

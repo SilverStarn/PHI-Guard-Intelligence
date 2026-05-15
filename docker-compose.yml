@@ -1,0 +1,33 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      PYTHONPATH: /app/apps/scanner
+      PHI_GUARD_MODE: demo
+    ports:
+      - "8000:8000"
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    environment:
+      VITE_API_BASE_URL: http://api:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+
+  demo-postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: phi_guard
+      POSTGRES_PASSWORD: phi_guard_demo
+      POSTGRES_DB: northstar_clinic
+    volumes:
+      - ./demo-data/sql:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "5432:5432"
+

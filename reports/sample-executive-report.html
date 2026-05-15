@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PHI Guard Intelligence Sample Executive Report</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        color: #172026;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      .metric {
+        display: inline-block;
+        border: 1px solid #dce2dd;
+        border-radius: 8px;
+        padding: 14px;
+        margin: 8px 8px 8px 0;
+      }
+      .metric strong {
+        display: block;
+        color: #c9333e;
+        font-size: 30px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Northstar Family Clinic PHI Risk Intelligence Report</h1>
+    <p>
+      Synthetic demo scan found concentrated PHI, broad role access, de-identification blockers,
+      free-text risk, and AI workflow exposure. This report flags potential risk and requires human review.
+    </p>
+    <section>
+      <div class="metric"><strong>93</strong>Risk score</div>
+      <div class="metric"><strong>5</strong>Critical findings</div>
+      <div class="metric"><strong>12</strong>High findings</div>
+      <div class="metric"><strong>11</strong>PHI assets</div>
+    </section>
+    <h2>Top Remediation Themes</h2>
+    <ul>
+      <li>Move analysts and marketing users to masked or aggregate views.</li>
+      <li>Redact or restrict raw free-text notes before reporting or export.</li>
+      <li>Remove direct identifiers from campaign and analytics datasets.</li>
+      <li>Add read and export audit coverage for high-risk tables.</li>
+      <li>Block raw PHI from AI prompt logs and embedding workflows.</li>
+    </ul>
+    <h2>Limitations</h2>
+    <p>
+      Synthetic data only. This project does not provide legal advice or certify HIPAA compliance.
+    </p>
+  </body>
+</html>
+

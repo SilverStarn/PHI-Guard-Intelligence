@@ -1,0 +1,24 @@
+{
+  "name": "phi-guard-intelligence",
+  "private": true,
+  "version": "0.1.0",
+  "description": "HIPAA-oriented healthcare data risk intelligence platform using synthetic demo data.",
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "cross-env PYTHONPATH=apps/scanner python -m uvicorn apps.api.app.main:app --reload --port 8000",
+    "dev:web": "npm --workspace @phi-guard-intelligence/web run dev",
+    "test": "npm run test:scanner && npm --workspace @phi-guard-intelligence/web run typecheck",
+    "test:scanner": "cross-env PYTHONPATH=apps/scanner python -m pytest tests/unit",
+    "scan:demo": "cross-env PYTHONPATH=apps/scanner python -m phi_guard_scanner.cli demo",
+    "agent:help": "cross-env PYTHONPATH=apps/scanner python -m phi_guard_scanner.cli --help",
+    "agent:scan-files": "cross-env PYTHONPATH=apps/scanner python -m phi_guard_scanner.cli scan-files",
+    "agent:submit": "cross-env PYTHONPATH=apps/scanner python -m phi_guard_scanner.cli submit"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3"
+  }
+}

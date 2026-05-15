@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  scanner-and-web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        run: python -m pip install -r apps/scanner/requirements-dev.txt -r apps/api/requirements.txt
+      - name: Test scanner
+        run: PYTHONPATH=apps/scanner pytest tests/unit
+      - name: Lint Python
+        run: python -m ruff check .
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install frontend dependencies
+        run: npm install
+      - name: Typecheck frontend
+        run: npm --workspace @phi-guard-intelligence/web run typecheck
+      - name: Build frontend
+        run: npm --workspace @phi-guard-intelligence/web run build

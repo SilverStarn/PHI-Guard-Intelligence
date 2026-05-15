@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Regulatory evidence loop</title>
+  <desc id="desc">A circular workflow from discovery through classification, explanation, remediation, and audit evidence.</desc>
+  <rect width="1200" height="680" fill="#ffffff"/>
+  <text x="76" y="82" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#162033">From Data Inventory to Audit-Ready Evidence</text>
+  <text x="76" y="112" font-family="Inter, Arial, sans-serif" font-size="16" fill="#667085">PHI Guard Intelligence turns scattered metadata into a repeatable risk analysis workflow.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2l8 4-8 4z" fill="#475467"/>
+    </marker>
+  </defs>
+
+  <circle cx="600" cy="364" r="128" fill="#172033"/>
+  <text x="526" y="344" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800" fill="#ffffff">Evidence</text>
+  <text x="506" y="378" font-family="Inter, Arial, sans-serif" font-size="16" fill="#c7d2e3">for risk analysis,</text>
+  <text x="500" y="404" font-family="Inter, Arial, sans-serif" font-size="16" fill="#c7d2e3">review, and remediation</text>
+
+  <g stroke="#475467" stroke-width="2.5" marker-end="url(#arrow)" fill="none">
+    <path d="M368 210c98-76 252-86 356-22"/>
+    <path d="M848 244c74 90 70 228-8 314"/>
+    <path d="M756 584c-104 62-256 52-352-24"/>
+    <path d="M318 518c-70-92-66-226 10-314"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="15">
+    <rect x="126" y="150" width="250" height="116" rx="16" fill="#eef7ff" stroke="#84caff"/>
+    <text x="154" y="190" font-size="20" font-weight="800" fill="#175cd3">1. Discover</text>
+    <text x="154" y="222" fill="#344054">Inventory tables, columns,</text>
+    <text x="154" y="246" fill="#344054">lineage, roles, and files.</text>
+
+    <rect x="824" y="150" width="250" height="116" rx="16" fill="#ecfdf3" stroke="#abefc6"/>
+    <text x="852" y="190" font-size="20" font-weight="800" fill="#067647">2. Classify</text>
+    <text x="852" y="222" fill="#344054">Detect identifiers, health</text>
+    <text x="852" y="246" fill="#344054">context, free text, and AI risk.</text>
+
+    <rect x="824" y="464" width="250" height="116" rx="16" fill="#fff8e6" stroke="#ffdf89"/>
+    <text x="852" y="504" font-size="20" font-weight="800" fill="#b54708">3. Explain</text>
+    <text x="852" y="536" fill="#344054">Score impact, likelihood,</text>
+    <text x="852" y="560" fill="#344054">exposure, gaps, confidence.</text>
+
+    <rect x="126" y="464" width="250" height="116" rx="16" fill="#fef3f2" stroke="#fda29b"/>
+    <text x="154" y="504" font-size="20" font-weight="800" fill="#b42318">4. Remediate</text>
+    <text x="154" y="536" fill="#344054">Assign owners, due windows,</text>
+    <text x="154" y="560" fill="#344054">controls, and review steps.</text>
+  </g>
+</svg>
