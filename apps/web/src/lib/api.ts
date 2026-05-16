@@ -46,11 +46,25 @@ async function responseErrorMessage(path: string, response: Response): Promise<s
     return fallback;
   }
   const text = await response.text();
-  return text.trim() || fallback;
+  const trimmed = text.trim();
+  if (trimmed) {
+    return trimmed;
+  }
+  if (response.status >= 500 && path.startsWith("/api")) {
+    return `${fallback}. The FastAPI server may be offline or restarting. From the repo root, run npm run dev and keep that terminal open.`;
+  }
+  return fallback;
 }
 
 async function getJson<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(path, init);
+  let response: Response;
+  try {
+    response = await fetch(path, init);
+  } catch {
+    throw new Error(
+      `${path} could not reach the API server. From the repo root, run npm run dev and keep that terminal open.`
+    );
+  }
   if (!response.ok) {
     throw new Error(await responseErrorMessage(path, response));
   }

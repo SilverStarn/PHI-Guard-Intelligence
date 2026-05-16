@@ -258,7 +258,7 @@ export function App() {
           <AlertTriangle size={24} />
           <h2>API unavailable</h2>
           <p>{error}</p>
-          <code>$env:PYTHONPATH="apps/scanner"; python -m uvicorn apps.api.app.main:app --reload --port 8000</code>
+          <code>npm run dev</code>
         </section>
       </Shell>
     );

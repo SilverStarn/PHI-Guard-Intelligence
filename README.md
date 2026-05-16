@@ -54,20 +54,20 @@ Install frontend dependencies:
 npm install
 ```
 
-Run the API:
+Start the local demo from the repository root:
 
 ```powershell
-$env:PYTHONPATH="apps/scanner"
-python -m uvicorn apps.api.app.main:app --reload --port 8000
+npm run dev
 ```
 
-Run the web app:
+That command starts both services:
 
-```powershell
-npm --workspace @phi-guard-intelligence/web run dev
-```
+- FastAPI: `http://127.0.0.1:8000`
+- React/Vite: `http://127.0.0.1:5173`
 
-Open the Vite URL printed by the web command. The app proxies `/api/*` to `http://127.0.0.1:8000` by default. Docker Compose can override that proxy target with `VITE_API_BASE_URL`.
+Open the Vite URL printed by the command. The app proxies `/api/*` to `http://127.0.0.1:8000` by default. Docker Compose can override that proxy target with `VITE_API_BASE_URL`.
+
+If you start only the web workspace command, the UI will load but API-backed tabs will fail because the FastAPI server is not running.
 
 ## Demo Scenario
 
